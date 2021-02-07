@@ -11,7 +11,8 @@ class ImageController extends Controller
     //
     public function index()
     {
-        return 'Hi, Welcome to Example AWS S3';
+        $images = Image::paginate(1);
+        return view('images.index', compact('images'));
     }
 
     public function create()
