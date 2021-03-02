@@ -19,7 +19,7 @@ class ImageController extends Controller
     {
         //
         // return new ImageResource(Image::find('e022b7f9-107f-4b10-997e-0d444207ff3b')); //for single file
-        return ImageResource::collection(Image::all());
+        return ImageResource::collection(Image::paginate(1));
     }
 
     /**
